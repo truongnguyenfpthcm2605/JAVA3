@@ -1,0 +1,34 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package model;
+
+/**
+ *
+ * @author truong
+ */
+public class CheckData {
+
+    public boolean checkName(String a) {
+      
+        if (a.length() < 0 || a.length() > 30) {
+            return false;
+        }
+        return true;
+    }
+
+    public boolean checkEmail(String e) {
+         String parttern = "^\\w{3,}@\\w{2,}(\\.[a-zA-Z]{2,3}){1,2}$";
+        return e.matches(parttern);
+    }
+       public boolean checkNumberPhone(String s){
+        String parttern = "0\\d{5,10}";
+        return s.matches(parttern);
+    }
+       public boolean checkMaSv(String ma) {
+        String parttern = "^[SV]+[0-9]{3}$";
+        return ma.matches(parttern);
+    }
+
+}
